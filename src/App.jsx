@@ -33,7 +33,7 @@ const App = () => {
 
 
 
-  const Router = import.meta.env.NODE === 'production' ? HashRouter : BrowserRouter;
+  const Router = import.meta.env.MODE === 'production' ? HashRouter : BrowserRouter;
 
   return (
     <Router >
