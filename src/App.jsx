@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ExpenseList from './components/ExpenseList'
@@ -33,8 +33,10 @@ const App = () => {
 
 
 
+  const Router = process.env.NODE_ENV === 'production' ? HashRouter : BrowserRouter;
+
   return (
-    <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/expenseTracker2' : '/'}>
+    <Router basename={process.env.NODE_ENV === 'production' ? '/expenseTracker2' : '/'}>
       <Header />
       <main className='main-content'>
         <Routes>
@@ -45,7 +47,7 @@ const App = () => {
         </Routes>
       </main>
       <Footer />
-    </BrowserRouter>
+    </Router>
   )
 }
 
