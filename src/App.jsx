@@ -33,10 +33,10 @@ const App = () => {
 
 
 
-  const Router = process.env.NODE_ENV === 'production' ? HashRouter : BrowserRouter;
+  const Router = import.meta.env.NODE === 'production' ? HashRouter : BrowserRouter;
 
   return (
-    <Router basename={process.env.NODE_ENV === 'production' ? '/expenseTracker2' : '/'}>
+    <Router >
       <Header />
       <main className='main-content'>
         <Routes>
