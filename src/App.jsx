@@ -33,10 +33,8 @@ const App = () => {
 
 
 
-  const Router = import.meta.env.MODE === 'production' ? HashRouter : BrowserRouter;
-
   return (
-    <Router >
+    <HashRouter>
       <Header />
       <main className='main-content'>
         <Routes>
@@ -47,7 +45,7 @@ const App = () => {
         </Routes>
       </main>
       <Footer />
-    </Router>
+    </HashRouter>
   )
 }
 
