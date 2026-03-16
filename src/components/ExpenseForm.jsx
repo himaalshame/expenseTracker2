@@ -3,10 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const ExpenseForm = ({setExpenses}) => {
 
-
-
-
-
+  
   const navigate = useNavigate()
 
   const [title , setTitle] = useState("");

@@ -27,23 +27,25 @@ const App = () => {
     }
   })
 
+
+  // localStorage
   useEffect(()=>{
     localStorage.setItem("expenses" , JSON.stringify(expenses))
   }, [expenses])
 
 
 
+
   return (
     <HashRouter>
-      <Header />
-      <main className='main-content'>
+      <Header  />
+      
         <Routes>
           <Route path='/' element={<ExpenseList expenses={expenses} setExpenses={setExpenses} />} />
           <Route path='/form' element={<ExpenseForm setExpenses={setExpenses} />} />
           <Route path='/edit/:id' element={<ExpenseEdit setExpenses={setExpenses} expenses={expenses} />} />
           <Route path='*' element={<ExpenseList expenses={expenses} setExpenses={setExpenses} />} />
         </Routes>
-      </main>
       <Footer />
     </HashRouter>
   )

@@ -12,7 +12,10 @@ A simple and easy-to-use application for tracking daily and monthly expenses.
 ✅ Add new expenses  
 ✅ Edit existing expenses  
 ✅ Delete expenses  
-✅ Display total amount  
+✅ **Dynamic Filtering** by category  
+✅ **Search Functionality** by title  
+✅ **Clear All Data** with a single click (with confirmation)  
+✅ Display total amount (auto-updates with filters)  
 ✅ Categorize expenses (Food, Transport, Entertainment, Health, Shopping, Utilities, Other)  
 ✅ Set date for each expense  
 ✅ Data persistence with localStorage  
@@ -96,8 +99,12 @@ expenseTracker2/
 
 ## ✨ Future Improvements
 
+- [x] Add filters by category and search by title
+- [x] Add "Clear All" data feature
+- [ ] Implement dynamic sorting for table headers
 - [ ] Save data to cloud (Firebase/Backend)
-- [ ] Add filters by date and category
+- [ ] Add charts and visualization (Dashboard)
+- [ ] Export data to CSV or PDF
 - [ ] Dashboard with expense statistics
 - [ ] Charts and graphs for visualization
 - [ ] Multi-user support with authentication

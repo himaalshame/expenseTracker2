@@ -10,9 +10,8 @@ const Header = () => {
           💰 ExpenseTracker
         </Link>
         <nav className='nav-menu'>
-          <Link to='/' className='nav-link'>
-            Dashboard
-          </Link>
+          
+          
           <Link to='/form' className='nav-link btn-add'>
             + Add Expense
           </Link>
